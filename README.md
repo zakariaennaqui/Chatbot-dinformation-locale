@@ -1,15 +1,15 @@
-#  Chatbot + MNIST + Sign Language Recognition
+# ?? Chatbot + MNIST + Sign Language Recognition
 
 > A Python AI course project combining **NLP-powered Chatbot**, **MNIST digit recognition** and **Sign Language digit classification** � all built from scratch using PyTorch and TensorFlow/Keras.
 
-[![Python](https://img.shields.io/badge/Python-3.9%2B-bluelogo=python)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-orangelogo=pytorch)](https://pytorch.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-CNN-orangelogo=tensorflow)](https://www.tensorflow.org/)
-[![MySQL](https://img.shields.io/badge/MySQL-Database-bluelogo=mysql)](https://www.mysql.com/)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-orange?logo=pytorch)](https://pytorch.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-CNN-orange?logo=tensorflow)](https://www.tensorflow.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)](https://www.mysql.com/)
 
 ---
 
-## 
+## ?? Table of Contents
 
 - [Overview](#overview)
 - [Project Structure](#project-structure)
@@ -29,9 +29,9 @@ It is split into **three independent AI modules**, each exploring a different as
 
 | Module | Task | Framework |
 |--------|------|-----------|
-|  Chatbot | Intent classification via NLP + MLP | PyTorch + NLTK + MySQL |
-|  MNIST | Handwritten digit recognition | TensorFlow / Keras CNN |
-|  Sign Language | Sign language digit classification (0�9) | TensorFlow / Keras CNN |
+| ??? Chatbot | Intent classification via NLP + MLP | PyTorch + NLTK + MySQL |
+| ?? MNIST | Handwritten digit recognition | TensorFlow / Keras CNN |
+| ?? Sign Language | Sign language digit classification (0�9) | TensorFlow / Keras CNN |
 
 ---
 
@@ -44,7 +44,7 @@ project/
 +-- mnist_cnn.py              # Quick MNIST demo script
 +-- MNIST.pdf                 # MNIST reference report
 �
-+-- chatbot/                  #  Full chatbot module (GUI + DB)
++-- chatbot/                  # ??? Full chatbot module (GUI + DB)
 �   +-- main.py               # Tkinter GUI � login + chatbot window
 �   +-- chatbot.py            # ChatbotModel (PyTorch MLP) + ChatbotAssistant
 �   +-- database.py           # MySQL: user auth, chat history, dynamic training data
@@ -52,7 +52,7 @@ project/
 �   +-- chatbot_model.pth     # Saved PyTorch model weights
 �   +-- chatbot.sql           # Full MySQL schema
 �
-+-- mnist/                    #  MNIST CNN module
++-- mnist/                    # ?? MNIST CNN module
 �   +-- mnist_cnn.py          # CNN model + training + custom image test (OpenCV)
 �   +-- model.py              # Model definition
 �   +-- train.py              # Training script
@@ -62,7 +62,7 @@ project/
 �   +-- mnist_cnn.h5          # Saved Keras model
 �   +-- digit.jpg / digit.png # Real-world test images
 �
-+-- sign_language/            #  Sign Language CNN module
++-- sign_language/            # ?? Sign Language CNN module
     +-- model.py              # CNN architecture (3� Conv2D, 64�64 RGB, 10 classes)
     +-- train_sign_digits.py  # Training script
     +-- evaluate_sign_digits.py
@@ -79,7 +79,7 @@ project/
 ### Description
 
 A fully functional **intent-based chatbot** with a Tkinter desktop GUI, featuring:
-- **NLP pipeline**: normalisation  tokenisation  lemmatisation (NLTK)  Bag-of-Words vectorisation
+- **NLP pipeline**: normalisation ? tokenisation ? lemmatisation (NLTK) ? Bag-of-Words vectorisation
 - A **PyTorch MLP** trained on intent patterns from `intents.json` and DB-extracted keywords
 - **MySQL database** for user authentication, chat history, and **dynamic training data** (events, municipal services, transports)
 - **Hybrid intent detection**: direct DB keyword matching + ML model fallback
@@ -88,17 +88,17 @@ A fully functional **intent-based chatbot** with a Tkinter desktop GUI, featurin
 
 ```
 User Input
-    
-normalize_text()  NLTK tokenize + lemmatize  Bag of Words vector
-    
-detect_table_intent() --- direct DB keyword match --- DB query  formatted response
-     (fallback)
+    ?
+normalize_text() ? NLTK tokenize + lemmatize ? Bag of Words vector
+    ?
+detect_table_intent() --- direct DB keyword match ---? DB query ? formatted response
+    ? (fallback)
 ChatbotModel (PyTorch MLP)
-    fc1(input  128)  ReLU  Dropout(0.5)
-    fc2(128  64)     ReLU  Dropout(0.5)
-    fc3(64  n_intents)
-    
-argmax  predicted intent  response
+    fc1(input ? 128) ? ReLU ? Dropout(0.5)
+    fc2(128 ? 64)    ? ReLU ? Dropout(0.5)
+    fc3(64 ? n_intents)
+    ?
+argmax ? predicted intent ? response
 ```
 
 ### Database Schema
@@ -121,9 +121,9 @@ Trains a CNN on the classic [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (
 
 ```
 Input (28�28�1)
-   Conv2D(32, 3�3, ReLU)  MaxPooling(2�2)
-   Conv2D(64, 3�3, ReLU)  MaxPooling(2�2)
-   Flatten  Dense(128, ReLU)  Dense(10, Softmax)
+  ? Conv2D(32, 3�3, ReLU) ? MaxPooling(2�2)
+  ? Conv2D(64, 3�3, ReLU) ? MaxPooling(2�2)
+  ? Flatten ? Dense(128, ReLU) ? Dense(10, Softmax)
 ```
 
 - **Optimizer**: Adam | **Loss**: Sparse Categorical Cross-Entropy | **Epochs**: 5
@@ -140,10 +140,10 @@ Trains a CNN to classify **sign language hand gesture images** (digits 0�9) fr
 
 ```
 Input (64�64�3 RGB)
-   Conv2D(32, 3�3, ReLU)   MaxPooling(2�2)
-   Conv2D(64, 3�3, ReLU)   MaxPooling(2�2)
-   Conv2D(128, 3�3, ReLU)  MaxPooling(2�2)
-   Flatten  Dense(128, ReLU)  Dense(10, Softmax)
+  ? Conv2D(32, 3�3, ReLU)  ? MaxPooling(2�2)
+  ? Conv2D(64, 3�3, ReLU)  ? MaxPooling(2�2)
+  ? Conv2D(128, 3�3, ReLU) ? MaxPooling(2�2)
+  ? Flatten ? Dense(128, ReLU) ? Dense(10, Softmax)
 ```
 
 - **Optimizer**: Adam | **Loss**: Sparse Categorical Cross-Entropy | **Epochs**: 10
@@ -210,7 +210,7 @@ cd chatbot
 python main.py
 ```
 
-Log in or register  ask about events, services or transport lines.
+Log in or register ? ask about events, services or transport lines.
 
 ### Train & Test MNIST
 
@@ -236,7 +236,7 @@ python visualize_sign_digits.py
 �                     Python AI Project                        �
 �                                                              �
 �  +-------------------+  +------------+  +----------------+  �
-�  �   NLP Chatbot    �  �  MNIST   �  �  Sign Language�  �
+�  �  ??? NLP Chatbot    �  � ?? MNIST   �  � ?? Sign Language�  �
 �  �                   �  �            �  �                �  �
 �  �  PyTorch MLP      �  �  Keras CNN �  �  Keras CNN     �  �
 �  �  NLTK + BoW       �  �  28�28 BW  �  �  64�64 RGB     �  �
@@ -251,4 +251,4 @@ python visualize_sign_digits.py
 
 **Zakaria Ennaqui**
 4th-year Computer Engineering Student � ENSA Berrechid
- [github.com/zakariaennaqui](https://github.com/zakariaennaqui) |  [zakaria-ennaqui.vercel.app](https://zakaria-ennaqui.vercel.app)
+?? [github.com/zakariaennaqui](https://github.com/zakariaennaqui) | ?? [zakaria-ennaqui.vercel.app](https://zakaria-ennaqui.vercel.app)

@@ -8,6 +8,16 @@
 [![MySQL](https://img.shields.io/badge/MySQL-Dynamic%20DB-blue?logo=mysql)](https://www.mysql.com/)
 [![NLTK](https://img.shields.io/badge/NLTK-NLP-green)](https://www.nltk.org/)
 
+<div align="center">
+
+<img src="images/ssis-logo.png.webp" width="100" height="100"/>
+<img src="images/ssms.jpg" width="100" height="100"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" width="50" height="50"/>
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" width="50" height="50"/><br>
+<img src="https://www.python.org/community/logos" alt="py"/>
+
+</div>
+
 ---
 
 ## Architecture Overview

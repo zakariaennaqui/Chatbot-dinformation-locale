@@ -1,21 +1,21 @@
-# ?? Chatbot + MNIST + Sign Language Recognition
+#  Chatbot + MNIST + Sign Language Recognition
 
-> A Python AI course project combining **NLP-powered Chatbot**, **MNIST digit recognition** and **Sign Language digit classification** — all built from scratch using PyTorch and TensorFlow/Keras.
+> A Python AI course project combining **NLP-powered Chatbot**, **MNIST digit recognition** and **Sign Language digit classification** ï¿½ all built from scratch using PyTorch and TensorFlow/Keras.
 
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-orange?logo=pytorch)](https://pytorch.org/)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-CNN-orange?logo=tensorflow)](https://www.tensorflow.org/)
-[![MySQL](https://img.shields.io/badge/MySQL-Database-blue?logo=mysql)](https://www.mysql.com/)
+[![Python](https://img.shields.io/badge/Python-3.9%2B-bluelogo=python)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-orangelogo=pytorch)](https://pytorch.org/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-CNN-orangelogo=tensorflow)](https://www.tensorflow.org/)
+[![MySQL](https://img.shields.io/badge/MySQL-Database-bluelogo=mysql)](https://www.mysql.com/)
 
 ---
 
-## ?? Table of Contents
+## 
 
 - [Overview](#overview)
 - [Project Structure](#project-structure)
-- [Module 1 — NLP Chatbot](#module-1--nlp-chatbot)
-- [Module 2 — MNIST Digit Recognition](#module-2--mnist-digit-recognition-cnn)
-- [Module 3 — Sign Language Classification](#module-3--sign-language-digit-classification)
+- [Module 1 ï¿½ NLP Chatbot](#module-1--nlp-chatbot)
+- [Module 2 ï¿½ MNIST Digit Recognition](#module-2--mnist-digit-recognition-cnn)
+- [Module 3 ï¿½ Sign Language Classification](#module-3--sign-language-digit-classification)
 - [Tech Stack](#tech-stack)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -24,14 +24,14 @@
 
 ## Overview
 
-This project was developed as part of the **"Programmation Python Pour IA"** course (S7 — ENSA Berrechid).
+This project was developed as part of the **"Programmation Python Pour IA"** course (S7 ï¿½ ENSA Berrechid).
 It is split into **three independent AI modules**, each exploring a different aspect of applied machine learning:
 
 | Module | Task | Framework |
 |--------|------|-----------|
-| ??? Chatbot | Intent classification via NLP + MLP | PyTorch + NLTK + MySQL |
-| ?? MNIST | Handwritten digit recognition | TensorFlow / Keras CNN |
-| ?? Sign Language | Sign language digit classification (0–9) | TensorFlow / Keras CNN |
+|  Chatbot | Intent classification via NLP + MLP | PyTorch + NLTK + MySQL |
+|  MNIST | Handwritten digit recognition | TensorFlow / Keras CNN |
+|  Sign Language | Sign language digit classification (0ï¿½9) | TensorFlow / Keras CNN |
 
 ---
 
@@ -43,43 +43,43 @@ project/
 +-- intents.json              # Base intents (greeting, goodbye, stocks...)
 +-- mnist_cnn.py              # Quick MNIST demo script
 +-- MNIST.pdf                 # MNIST reference report
-¦
-+-- chatbot/                  # ??? Full chatbot module (GUI + DB)
-¦   +-- main.py               # Tkinter GUI — login + chatbot window
-¦   +-- chatbot.py            # ChatbotModel (PyTorch MLP) + ChatbotAssistant
-¦   +-- database.py           # MySQL: user auth, chat history, dynamic training data
-¦   +-- intents.json          # Minimal intents (greeting, goodbye)
-¦   +-- chatbot_model.pth     # Saved PyTorch model weights
-¦   +-- chatbot.sql           # Full MySQL schema
-¦
-+-- mnist/                    # ?? MNIST CNN module
-¦   +-- mnist_cnn.py          # CNN model + training + custom image test (OpenCV)
-¦   +-- model.py              # Model definition
-¦   +-- train.py              # Training script
-¦   +-- evaluate.py           # Evaluation script
-¦   +-- predict.py            # Single-image prediction
-¦   +-- visualize_mnist.py    # Visualization of predictions
-¦   +-- mnist_cnn.h5          # Saved Keras model
-¦   +-- digit.jpg / digit.png # Real-world test images
-¦
-+-- sign_language/            # ?? Sign Language CNN module
-    +-- model.py              # CNN architecture (3× Conv2D, 64×64 RGB, 10 classes)
+ï¿½
++-- chatbot/                  #  Full chatbot module (GUI + DB)
+ï¿½   +-- main.py               # Tkinter GUI ï¿½ login + chatbot window
+ï¿½   +-- chatbot.py            # ChatbotModel (PyTorch MLP) + ChatbotAssistant
+ï¿½   +-- database.py           # MySQL: user auth, chat history, dynamic training data
+ï¿½   +-- intents.json          # Minimal intents (greeting, goodbye)
+ï¿½   +-- chatbot_model.pth     # Saved PyTorch model weights
+ï¿½   +-- chatbot.sql           # Full MySQL schema
+ï¿½
++-- mnist/                    #  MNIST CNN module
+ï¿½   +-- mnist_cnn.py          # CNN model + training + custom image test (OpenCV)
+ï¿½   +-- model.py              # Model definition
+ï¿½   +-- train.py              # Training script
+ï¿½   +-- evaluate.py           # Evaluation script
+ï¿½   +-- predict.py            # Single-image prediction
+ï¿½   +-- visualize_mnist.py    # Visualization of predictions
+ï¿½   +-- mnist_cnn.h5          # Saved Keras model
+ï¿½   +-- digit.jpg / digit.png # Real-world test images
+ï¿½
++-- sign_language/            #  Sign Language CNN module
+    +-- model.py              # CNN architecture (3ï¿½ Conv2D, 64ï¿½64 RGB, 10 classes)
     +-- train_sign_digits.py  # Training script
     +-- evaluate_sign_digits.py
-    +-- visualize_sign_digits.py  # 6×6 prediction grid
+    +-- visualize_sign_digits.py  # 6ï¿½6 prediction grid
     +-- utils.py              # Data loading utilities
-    +-- data/                 # Train/test image folders (0–9 digit signs)
+    +-- data/                 # Train/test image folders (0ï¿½9 digit signs)
     +-- saved_model/          # Saved sign_digits_cnn.keras
 ```
 
 ---
 
-## Module 1 — NLP Chatbot
+## Module 1 ï¿½ NLP Chatbot
 
 ### Description
 
 A fully functional **intent-based chatbot** with a Tkinter desktop GUI, featuring:
-- **NLP pipeline**: normalisation ? tokenisation ? lemmatisation (NLTK) ? Bag-of-Words vectorisation
+- **NLP pipeline**: normalisation  tokenisation  lemmatisation (NLTK)  Bag-of-Words vectorisation
 - A **PyTorch MLP** trained on intent patterns from `intents.json` and DB-extracted keywords
 - **MySQL database** for user authentication, chat history, and **dynamic training data** (events, municipal services, transports)
 - **Hybrid intent detection**: direct DB keyword matching + ML model fallback
@@ -88,17 +88,17 @@ A fully functional **intent-based chatbot** with a Tkinter desktop GUI, featurin
 
 ```
 User Input
-    ?
-normalize_text() ? NLTK tokenize + lemmatize ? Bag of Words vector
-    ?
-detect_table_intent() --- direct DB keyword match ---? DB query ? formatted response
-    ? (fallback)
+    
+normalize_text()  NLTK tokenize + lemmatize  Bag of Words vector
+    
+detect_table_intent() --- direct DB keyword match --- DB query  formatted response
+     (fallback)
 ChatbotModel (PyTorch MLP)
-    fc1(input ? 128) ? ReLU ? Dropout(0.5)
-    fc2(128 ? 64)    ? ReLU ? Dropout(0.5)
-    fc3(64 ? n_intents)
-    ?
-argmax ? predicted intent ? response
+    fc1(input  128)  ReLU  Dropout(0.5)
+    fc2(128  64)     ReLU  Dropout(0.5)
+    fc3(64  n_intents)
+    
+argmax  predicted intent  response
 ```
 
 ### Database Schema
@@ -113,17 +113,17 @@ transports          -- id, ligne, type, destination, horaires, tarif, etat_trafi
 
 ---
 
-## Module 2 — MNIST Digit Recognition (CNN)
+## Module 2 ï¿½ MNIST Digit Recognition (CNN)
 
-Trains a CNN on the classic [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (60k handwritten digits, 28×28 grayscale).
+Trains a CNN on the classic [MNIST](http://yann.lecun.com/exdb/mnist/) dataset (60k handwritten digits, 28ï¿½28 grayscale).
 
 ### CNN Architecture
 
 ```
-Input (28×28×1)
-  ? Conv2D(32, 3×3, ReLU) ? MaxPooling(2×2)
-  ? Conv2D(64, 3×3, ReLU) ? MaxPooling(2×2)
-  ? Flatten ? Dense(128, ReLU) ? Dense(10, Softmax)
+Input (28ï¿½28ï¿½1)
+   Conv2D(32, 3ï¿½3, ReLU)  MaxPooling(2ï¿½2)
+   Conv2D(64, 3ï¿½3, ReLU)  MaxPooling(2ï¿½2)
+   Flatten  Dense(128, ReLU)  Dense(10, Softmax)
 ```
 
 - **Optimizer**: Adam | **Loss**: Sparse Categorical Cross-Entropy | **Epochs**: 5
@@ -132,23 +132,23 @@ Input (28×28×1)
 
 ---
 
-## Module 3 — Sign Language Digit Classification
+## Module 3 ï¿½ Sign Language Digit Classification
 
-Trains a CNN to classify **sign language hand gesture images** (digits 0–9) from the [Sign Language Digits Dataset](https://github.com/ardamavi/Sign-Language-Digits-Dataset).
+Trains a CNN to classify **sign language hand gesture images** (digits 0ï¿½9) from the [Sign Language Digits Dataset](https://github.com/ardamavi/Sign-Language-Digits-Dataset).
 
 ### CNN Architecture
 
 ```
-Input (64×64×3 RGB)
-  ? Conv2D(32, 3×3, ReLU)  ? MaxPooling(2×2)
-  ? Conv2D(64, 3×3, ReLU)  ? MaxPooling(2×2)
-  ? Conv2D(128, 3×3, ReLU) ? MaxPooling(2×2)
-  ? Flatten ? Dense(128, ReLU) ? Dense(10, Softmax)
+Input (64ï¿½64ï¿½3 RGB)
+   Conv2D(32, 3ï¿½3, ReLU)   MaxPooling(2ï¿½2)
+   Conv2D(64, 3ï¿½3, ReLU)   MaxPooling(2ï¿½2)
+   Conv2D(128, 3ï¿½3, ReLU)  MaxPooling(2ï¿½2)
+   Flatten  Dense(128, ReLU)  Dense(10, Softmax)
 ```
 
 - **Optimizer**: Adam | **Loss**: Sparse Categorical Cross-Entropy | **Epochs**: 10
 - Images loaded via `image_dataset_from_directory` (directory-structured: `data/train/0..9`, `data/test/0..9`)
-- `visualize_sign_digits.py` renders a 6×6 prediction grid (green = correct, red = wrong)
+- `visualize_sign_digits.py` renders a 6ï¿½6 prediction grid (green = correct, red = wrong)
 - Saves model as `saved_model/sign_digits_cnn.keras`
 
 ---
@@ -210,7 +210,7 @@ cd chatbot
 python main.py
 ```
 
-Log in or register ? ask about events, services or transport lines.
+Log in or register  ask about events, services or transport lines.
 
 ### Train & Test MNIST
 
@@ -233,15 +233,15 @@ python visualize_sign_digits.py
 
 ```
 +--------------------------------------------------------------+
-¦                     Python AI Project                        ¦
-¦                                                              ¦
-¦  +-------------------+  +------------+  +----------------+  ¦
-¦  ¦  ??? NLP Chatbot    ¦  ¦ ?? MNIST   ¦  ¦ ?? Sign Language¦  ¦
-¦  ¦                   ¦  ¦            ¦  ¦                ¦  ¦
-¦  ¦  PyTorch MLP      ¦  ¦  Keras CNN ¦  ¦  Keras CNN     ¦  ¦
-¦  ¦  NLTK + BoW       ¦  ¦  28×28 BW  ¦  ¦  64×64 RGB     ¦  ¦
-¦  ¦  MySQL + Tkinter  ¦  ¦  10 digits ¦  ¦  10 gestures   ¦  ¦
-¦  +-------------------+  +------------+  +----------------+  ¦
+ï¿½                     Python AI Project                        ï¿½
+ï¿½                                                              ï¿½
+ï¿½  +-------------------+  +------------+  +----------------+  ï¿½
+ï¿½  ï¿½   NLP Chatbot    ï¿½  ï¿½  MNIST   ï¿½  ï¿½  Sign Languageï¿½  ï¿½
+ï¿½  ï¿½                   ï¿½  ï¿½            ï¿½  ï¿½                ï¿½  ï¿½
+ï¿½  ï¿½  PyTorch MLP      ï¿½  ï¿½  Keras CNN ï¿½  ï¿½  Keras CNN     ï¿½  ï¿½
+ï¿½  ï¿½  NLTK + BoW       ï¿½  ï¿½  28ï¿½28 BW  ï¿½  ï¿½  64ï¿½64 RGB     ï¿½  ï¿½
+ï¿½  ï¿½  MySQL + Tkinter  ï¿½  ï¿½  10 digits ï¿½  ï¿½  10 gestures   ï¿½  ï¿½
+ï¿½  +-------------------+  +------------+  +----------------+  ï¿½
 +--------------------------------------------------------------+
 ```
 
@@ -250,5 +250,5 @@ python visualize_sign_digits.py
 ## Author
 
 **Zakaria Ennaqui**
-4th-year Computer Engineering Student — ENSA Berrechid
-?? [github.com/zakariaennaqui](https://github.com/zakariaennaqui) | ?? [zakaria-ennaqui.vercel.app](https://zakaria-ennaqui.vercel.app)
+4th-year Computer Engineering Student ï¿½ ENSA Berrechid
+ [github.com/zakariaennaqui](https://github.com/zakariaennaqui) |  [zakaria-ennaqui.vercel.app](https://zakaria-ennaqui.vercel.app)

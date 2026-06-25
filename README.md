@@ -203,6 +203,8 @@ Unlike a simple MLP, a **Convolutional Neural Network (CNN)** learns spatial fea
 
 ![Convolutional Neural Networks](assets/Convolutional-Neural-Networks.png)
 
+![MNIST](assets/MNIST.png)
+
 ### CNN Architecture
 
 ![CNN Architecture](assets/CNN%20Architecture%20for%20Digit%20Classification.jpg)
@@ -250,7 +252,7 @@ Uses the [Sign Language Digits Dataset](https://github.com/ardamavi/Sign-Languag
 - RGB, 64x64 pixels (resized from original 100x100)
 - Organized in `data/train/0..9/` and `data/test/0..9/`
 
-![Dataset Card](assets/dataset-card.jpg)
+![dataset card](assets/dataset-card.png)
 
 ### Deeper CNN Architecture
 
@@ -379,9 +381,3 @@ python evaluate_sign_digits.py      # accuracy + loss on test set
 ```
 
 ---
-
-## Author
-
-**Zakaria Ennaqui**
-4th-year Computer Engineering Student — ENSA Berrechid
-GitHub: https://github.com/zakariaennaqui | Website: https://zakaria-ennaqui.vercel.app

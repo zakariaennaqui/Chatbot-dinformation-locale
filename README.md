@@ -149,8 +149,7 @@ The chatbot model is a **Feed-Forward Neural Network (MLP)** implemented in PyTo
 
 ### Hybrid Intent Detection Strategy
 
-<!-- ![Intent detection pipeline](./assets/pipeline.png) -->
-<iframe src="https://zakariaennaqui.github.io/Chatbot-MNIST-Sign_language/pipeline.html" width="100%" height="420" frameborder="0" style="border:none;border-radius:12px;"></iframe>
+![Intent detection pipeline](./assets/pipeline.png)
 
 ### Database Schema
 

@@ -1,6 +1,5 @@
-﻿# Chatbot + MNIST + Sign Language Recognition
+﻿# 
 
-> **S7 Project — Programmation Python Pour IA | ENSA Berrechid**
 > A full Python AI project combining an **NLP Chatbot** (PyTorch MLP + MySQL + Tkinter GUI), **MNIST handwritten digit recognition** (TensorFlow/Keras CNN) and **Sign Language digit classification** (TensorFlow/Keras CNN) — built entirely from scratch.
 
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python)](https://www.python.org/)
@@ -11,13 +10,13 @@
 
 ---
 
-## Project Architecture Overview
+## Architecture Overview
 
 ![Project Architecture](assets/project_architecture_overview.png)
 
 ---
 
-## Table of Contents
+## Contents
 
 - [Overview](#overview)
 - [Project Structure](#project-structure)
@@ -33,8 +32,7 @@
 
 ## Overview
 
-This project was developed as part of the **"Programmation Python Pour IA"** course (Semester 7 — ENSA Berrechid).
-It explores three core domains of applied artificial intelligence:
+Explores three core domains of applied artificial intelligence:
 
 | Module | Task | Approach | Framework |
 |--------|------|----------|-----------|
@@ -44,7 +42,7 @@ It explores three core domains of applied artificial intelligence:
 
 ---
 
-## Project Structure
+## Structure
 
 ```
 project/
@@ -151,15 +149,7 @@ The chatbot model is a **Feed-Forward Neural Network (MLP)** implemented in PyTo
 
 ### Hybrid Intent Detection Strategy
 
-```
-1. detect_table_intent(input)
-   -> Directly scans DB rows for keyword matches (O(n) over all data)
-   -> Returns: 'evenements' | 'services_municipaux' | 'transports' | None
-
-2. If None -> PyTorch MLP model (predict_intent)
-   -> BoW vector -> fc1 -> fc2 -> fc3 -> argmax
-   -> Returns: intent tag
-```
+![Intent detection pipeline](./assets/pipeline.png)
 
 ### Database Schema
 
